@@ -1,3 +1,5 @@
+const errorText = document.getElementById("error")
+
 // Obtener el formulario de inicio de sesión
 const loginForm = document.querySelector('form');
 
@@ -18,6 +20,6 @@ loginForm.addEventListener('submit', (event) => {
 		// Redirigir al usuario a la página deseada
 		window.location.href = '../HTML/mainPage.html';
 	} else {
-		alert('Nombre de usuario o contraseña incorrectos.');
+		errorText.innerHTML = 'Nombre de usuario o contraseña incorrectos'
 	}
 });

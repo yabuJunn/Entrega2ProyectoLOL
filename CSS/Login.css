@@ -222,3 +222,10 @@ a:link, a:visited, a:active {
 #links a:hover{
     color: #fff;
 }
+
+#error {
+    color: #D89E30;
+    font-size: 20px;
+    font-family: url(../Fuentes/Roboto/Roboto-Bold.ttf);
+    font-weight: bold;
+}
