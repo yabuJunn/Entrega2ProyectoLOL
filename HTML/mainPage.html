@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="../CSS/mainPage.css">
+</head>
+
+<body>
+    <nav>
+        <img src="../Recursos/RecursosJuanDavid/Recursos/Logo_Lol.png" alt="logoLol" id="logoLol">
+        <div id="searchBar">
+            <img src="../Recursos/RecursosJuanDavid/Iconos/search.png" alt="search">
+            <input type="search" placeholder="Search the champiom you desires..." id="searchCampeonTxt" class="icon"
+                oninput="buscarPersonaje(searchCampeonTxt.value)">
+        </div>
+        <div class="horizontalSpace"></div>
+        <a href="../HTML/favoritePage.html"><img src="../Recursos/RecursosJuanDavid/Iconos/star_white.png" alt=""
+                class="icon"></a>
+        <a href="../HTML/userProfile.html"><img src="../Recursos/RecursosJuanDavid/Iconos/person.png" alt="" class="icon"
+                id="person"></a>
+    </nav>
+    <h1>Lista de Campeones</h1>
+    <div id="contenedorAllCampeones">
+
+    </div>
+
+    <script src="../JS/claseCampeon.js"></script>
+    <script src="../JS/mainPage.js"></script>
+
+</body>
+
+</html>

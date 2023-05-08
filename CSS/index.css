@@ -1,0 +1,422 @@
+@font-face {
+    font-family: "Beaufort for LOL Bold";
+    src: url(Beaufort\ for\ LOL\ Bold.ttf);
+}
+
+
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;    
+    outline: none; border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.824),rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 60px;
+    position: fixed;    
+    z-index: 1000;
+    
+}
+
+.nav-bar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    
+
+}
+
+
+.logo1 img {
+    width: 41px;
+    height: 41px;
+    margin: 20px;
+}
+
+
+.logo2 img {
+    width: 94px;
+    height: 35px;
+    margin: 20px;
+}
+
+.navbar a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin: 20px;    
+}
+
+.buttons {
+    display: flex;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;    
+    width: 110px;
+    height: 38px;
+    background: rgba(248, 248, 248, 0.84);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;   
+
+}
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 100vh;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    
+}
+
+#uno {
+    height: 100vh;
+    background: url(./images/wallpaperflare2.com_wallpaper.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+}
+
+#dos {
+    height: 100vh;
+    background: url(./images/wallpaperflare.com_wallpaper.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+}
+
+#tres {
+    height: 100vh;
+    background: url(./images/pike.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+}
+
+#cuatro {
+    height: 100vh;
+    background: url(./images/karim.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+}
+
+#cinco {
+    height: 100vh;
+    background: url(./images/wallpaperflare2.com_wallpaper.jpg) no-repeat; 
+    background-size: cover;
+    background-position: center;
+
+}
+
+.video {
+    width: 100%;
+}
+
+
+
+
+.position-card{
+    padding-left: 10px;
+    position: absolute;
+    top: 370px;
+    left: 114px;
+}
+
+.contenedor{
+    width: 593px;
+    height: 284px;
+    padding-left: 18px;
+    padding-top: 13px;
+    color: white;
+    background: rgba( 2, 2, 2, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    border-radius: 10px;
+    
+    
+}
+
+
+  
+
+.tittle-content {
+    font-family: "Beaufort for LOL Bold";
+    font-size: 35px;
+}
+
+.info-content {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 23px;
+}
+.main-tittle-about {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.about-div {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.about-tittle {
+    font-family: "Beaufort for LOL Bold";
+    font-size: 55px;
+}
+
+
+.position-about{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+       
+
+}
+
+.about-content {
+    width: 1420px;
+    height: 556px;
+    background: linear-gradient(180deg, rgba(107, 165, 218, 0.31) 0%, rgba(107, 165, 218, 0.1302) 100%);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 22px;
+       
+}
+
+.carousel2 {
+    gap: 500px;
+}
+
+
+.carousel-cell2 {
+    width: 1420px;
+    height: 556px;
+    margin-right: 300px;
+    background: #8C8;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(107, 165, 218, 0.31) 0%, rgba(107, 165, 218, 0.1302) 100%);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 128px;
+    padding-left: 70px ;
+    padding-right: 60px;    
+    
+}
+
+.position-info-about {
+    display: flex;
+    align-items: center;
+}
+
+
+.positon-info {
+    height: 100%;
+}
+
+
+
+.about-info{    
+    display: flex;
+    gap: 40px;
+    
+}
+
+
+
+.about-img img {
+    width: 280px;
+}
+
+.about-text {
+    margin-bottom: 10px;
+}
+.about-text h1 {
+    font-family: "Beaufort for LOL Bold";
+    font-size: 48px;
+
+}
+
+.about-text p {
+    font-family: 'Roboto', sans-serif;   
+    font-size: 22px;
+    margin-top: 40px;
+    
+
+}
+
+.about-icons {
+    display: flex;
+    gap: 30px;    
+    align-items: center;
+    margin-left: 323px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.card-contact {
+    width: 399px;
+    height: 647px;
+    background: linear-gradient(270deg, rgba(24, 43, 148, 0.31) 44.05%, rgba(14, 116, 148, 0.1302) 100%);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 22px;   
+    margin: 45px;
+    position: relative;
+
+
+}
+
+.main-tittle-contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-card img {
+    width: 220px;    
+    height: 220px;
+    margin-top: 101px;
+    
+    
+    
+}
+.esferass {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    padding: 20px;
+}
+
+
+.text-card {
+    font-family: 'Roboto', sans-serif;    
+    font-weight: medium;
+    font-size: 18px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+   
+
+}
+
+.card-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 90px;
+    align-items: center;
+}
+
+.position-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.footer {
+    width: 100%;
+    background-color: #021526;
+}
+
+.icons-footer {
+    display: flex;
+    gap: 40px;    
+    align-items: center;
+    margin-top: 50px; 
+    margin-bottom: 30px;  
+}
+
+.face img {
+    width: 15px;
+}
+.riot-footer {
+    margin: 40px 0 80px 0;
+}
+
+.politic {
+    margin: 0 0 40px 0;
+}
+
+.politic a{       
+    padding: 0 70px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 243, 243);
+    font-size: 15px;
+    font-weight: bold;    
+}
+
+.advice {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.advice img {
+    width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+

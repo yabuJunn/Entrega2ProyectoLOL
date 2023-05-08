@@ -1,0 +1,456 @@
+/* CSS del Overview */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+@font-face {
+    font-family: LOL;
+    src: url(../Fuentes/Beaufort\ for\ LOL\ Bold.ttf);
+}
+header{
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    background: linear-gradient(rgba(0, 0, 0, 0.804),rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 60px;
+    position: fixed;    
+    z-index: 1000;
+}
+
+.espacioHorizontal {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#Background ul{
+    list-style-type: none;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 50px;
+}
+#Background li{
+    display: inline;
+    text-align: center;
+    margin: 10px 20px 0 0;
+    float: left;
+}
+#LOL_Icon{
+    height: 30px;
+}
+#Search{
+    width: 34vw;
+    height: 30px;
+    background-color: linear-gradient(90deg, rgba(255, 255, 255, 0.714) 52.3%, rgba(255, 255, 255, 0.067) 166.66%, rgba(255, 255, 255, 0) 176.35%);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-family: LOL;
+    font-size:medium;
+    color: #021526;
+    padding-left: 20px;
+}
+#Search::placeholder{
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Search_Icon.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position-y: 5px;
+    background-position-x: 0px;
+    padding-top: 5px;
+    padding-left: 25px;
+}
+#Star_Icon{
+    height: 30px;
+}
+#User_Icon{
+    width: 37px;
+}
+#Background{
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Seraphine.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+#Container{
+    width: 80vw;
+    height: 75vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.315);
+    box-shadow: inset 4px 4px 100px #000000;
+    margin-top: 120px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    
+}
+
+#Options_List{
+    display: flex;
+    float: left;
+    margin-top: 15px;
+    flex-direction: column;
+    
+}
+#Options_List ul{
+    list-style-type: none;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 50px;
+}
+#Options_List li{
+    display: inline;
+    text-align: center;
+    margin: 10px 50px 0 0;
+    float: left;
+}
+#Línea_1{
+    width: 16vh;
+    height: 4px;
+    background: linear-gradient(90deg, #D89E30 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.8;
+    border-radius: 3.5px;
+    border: none;
+    position: relative;
+    outline: none;
+}
+#Línea_2{
+    width: 13vh;
+    height: 4px;
+    background: linear-gradient(90deg, #D89E30 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.8;
+    border-radius: 3.5px;
+    border: none;
+    left: 9.6vw;
+    position: relative;
+    outline: none;
+}
+#Línea_3{
+    width: 23vh;
+    height: 4px;
+    background: linear-gradient(90deg, #D89E30 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.8;
+    border-radius: 3.5px;
+    border: none;
+    left: 18.2vw;
+    position: relative;
+    outline: none;
+}
+#lineaHorizontalMenu {
+    width: 90%;
+    height: 2px;
+    border: 0;
+    background: linear-gradient(90deg, #D89E30 0%, rgba(217, 217, 217, 0) 100%);
+    margin-top: 10px;
+
+}
+#Overview{
+    display: block;
+    font-family: LOL;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+#Overview:hover{
+    color:#D89E30
+}
+#Overview:active{
+    color:burlywood;
+}
+#Abilities{
+    display: block;
+    font-family: LOL;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+#Abilities:hover{
+    color:#D89E30
+}
+#Abilities:active{
+    color:burlywood;
+}
+#Available_Skins{
+    display: block;
+    font-family: LOL;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+#Available_Skins:hover{
+    color:#D89E30
+}
+#Available_Skins:active{
+    color:burlywood;
+}
+#Favorites{
+    margin-left: 24vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: LOL;
+    font-size:medium;
+    color:#fff;  
+    width: 180px;
+    height: 30px;
+    background-color: #021526;
+    border: none;
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+    margin-right: 5px;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+#Favorites:hover{
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color:#ffffff00;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    color: white;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+#Favorites:active{
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background-color:#74542E;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    color: #fff;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+.informationShow{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+.informationHidden{
+    display: none;
+}
+#information1 h1{
+    font-family: LOL;
+    font-weight: bold;
+    color: white;
+    position: relative;
+}
+#information1 h3{
+    font-family: LOL;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+#Text{
+    width: 73vw;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+#campeonResume{
+    width: 45vw;
+    height: 330px;
+    font-family: LOL;
+    font-size: 18px;
+    color: white;
+    font-weight: lighter;
+}
+#ResumeAbility {
+    width: 45vw;
+    height: 330px;
+    font-family: LOL;
+    font-size:larger;
+    color: white;
+}
+#Text hr{
+    width: 4px;
+    height: 290px;
+    background: linear-gradient(180deg, #D89E30 0%, rgba(217, 217, 217, 0) 100%);
+    opacity: 0.8;
+    border-radius: 3.5px;
+    border: none;
+    position: relative;
+    margin-left: 80px;
+    margin-right: 60px;
+}
+#Rol{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3vw;
+    padding-top: 20px;
+}
+#Rol_Icon{
+    width: 6vw;
+}
+#Role{
+    font-family: LOL;
+    color:#fff;
+    font-size:larger;
+}
+#Champion_Role{
+    font-family: LOL;
+    color:#D89E30;
+    font-size:larger;
+}
+
+#spriteImg {
+    width: 230px;
+    position: relative;
+    top: -450px;
+    left: 800px;
+}
+
+
+
+/* CSS del Abilities */
+#List {
+    margin: 0;
+    position: relative;
+    left: -50px;
+    height: 440px;
+}
+
+#skillTitle {
+    color: white; 
+}
+
+.Skills {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.048);
+}
+
+#skillType {
+    color: #D89E30;
+    margin-bottom: 20px;
+}
+
+.Skills:hover {
+    width: 170px;
+    border: 5px outset #ffffff;
+}
+
+.SkillsSelected {
+    border: 5px outset #ffcc6e;
+}
+
+.SkillsUnSelected {
+    border: 5px outset #74552eb6
+}
+
+
+
+/* CSS Slider */
+
+#information3 {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#sliderContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    overflow: hidden;
+    position: relative;
+    left: -25px;
+}
+
+#slider {
+    display: flex;
+    transform: translateX(var(--slide-transform));
+    transition: var(--transition);
+}
+
+.sliderElement {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    
+}
+
+.buttonButton {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 480px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 50px;
+    background-color: #D89E30;
+    border: none;
+    color: #ffffff;
+}
+
+.buttonButton:hover {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 480px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 50px;
+    background-color: #ffc861;
+    border: none;
+    color: #ffffff;
+}
+
+:root{
+    --slide-transform: 0;
+    --transition: transform 1s;
+
+}
+
+.skin {
+    height: 300px;
+}
+
+img {
+    max-width: 100%;
+}
