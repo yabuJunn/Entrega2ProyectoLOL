@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character detail</title>
+
+    <link rel="stylesheet" href="../CSS/characterDetail.css">
+</head>
+
+<body>
+    <div id="Background">
+        <header>
+            <nav>
+                <a href="../HTML/mainPage.html"><img id="LOL_Icon"
+                        src="../Recursos/RecursosNatalia/Imagenes/League_of_Legends.svg" alt="League_of_Legends"></a>
+                <div class="espacioHorizontal"></div>
+                <a href="../HTML/favoritePage.html"><img id="Star_Icon"
+                        src="../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg" alt="Star_Icon"></a>
+                <a href="../HTML/userProfile.html"><img id="User_Icon"
+                        src="../Recursos/RecursosNatalia/Imagenes/User_Icon.svg" alt="User_Icon"></a>
+            </nav>
+        </header>
+        <div id="Container">
+            <div id="Options_List">
+                <ul>
+                    <li><a id="Overview" onclick="mostrarInformation1()">Overview</a></li>
+                    <li><a id="Abilities" onclick="mostrarInformation2()">Abilities</a></li>
+                    <li><a id="Available_Skins" onclick="mostrarInformation3()">Available Skins</a></li>
+                    <li><a href="favoritePage.html" id="Favorites">Add to favorites</a></li>
+                    <hr id="Línea_1">
+                    <hr id="Línea_2">
+                    <hr id="Línea_3">
+                </ul>
+                <hr id="lineaHorizontalMenu">
+            </div>
+            <div id="information1" class="informationShow">
+                <h1 id="campeonName">SERAPHINE</h1>
+                <h3 id="campeonTittle">The Starry-Eyed Songstress</h3>
+                <div id="Container_Text">
+                    <div id="Text">
+                        <p id="campeonResume">Born in Piltover to Zaunite parents, Seraphine can hear the souls of
+                            others—the world sings to her, and she sings back. Though these sounds overwhelmed her in her
+                            youth, she now draws on them for inspiration, turning the chaos into a symphony. She performs
+                            for the sister cities to remind their citizens that they're not alone, that they're stronger
+                            together, and that, in her eyes, their potential is limitless.</p>
+                    </div>
+                    <div id="Container_rol">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Seraphine_0.jpg" alt="" id="spriteImg">
+                        <h2>ROL</h2>
+                        <p>Mage</p>
+                    </div>
+                </div>
+                <img src="../Recursos/RecursosNatalia/imagenes/Marco.png" alt="" id="Marco">
+            </div>
+            <div id="information2" class="informationHidden">
+                <h1 id="campeonName_2">SERAPHINE</h1>
+                <h3 id="campeonTittle_2">The Starry-Eyed Songstress</h3>
+                <ul id="List">
+                    <li><img id="passive" class="Skills" class="SkillsSelected" src="" alt="" onclick="passive()"></li>
+                    <li><img id="skill1" class="Skills" src="" alt="" onclick="spell1()"></li>
+                    <li><img id="skill2" class="Skills" src="" alt="" onclick="spell2()"></li>
+                    <li><img id="skill3" class="Skills" src="" alt="" onclick="spell3()"></li>
+                    <li><img id="skill4" class="Skills" src="" alt="" onclick="spell4()"></li>
+                    <div id="Línea_P"></div>
+                </ul>
+                <h2 id="skillTitle">abilityName</h2>
+                <h3 id="skillType">Passive</h3>
+                <p id="ResumeAbility">Every third basic spell will cast twice from Seraphine. Additionally, castingspells near allies grants her bonus magic damage and range on her next basic attack.</p>
+            </div>
+            <div id="information3" class="informationHidden">
+                <div id="sliderContainer" class="sliderContainer">
+                    <div id="slider" class="slider">
+                        <div class="sliderElement">
+                            <img src="../Recursos/RecursosNatalia/imagenes/Seraphine_1.jpg" alt="" class="skin">
+                            <h1 class="slider_Text">SKIN NAME</h1>
+                        </div>
+                        <div class="sliderElement">
+                            <img src="../Recursos/RecursosNatalia/imagenes/Seraphine_2.jpg" alt="" class="skin">
+                            <h1 class="slider_Text">SKIN NAME</h1>
+                        </div>
+                        <div class="sliderElement">
+                            <img src="../Recursos/RecursosNatalia/imagenes/Seraphine_3.jpg" alt="" class="skin">
+                            <h1 class="slider_Text">SKIN NAME</h1>
+                        </div>
+                        <div class="sliderElement">
+                            <img src="../Recursos/RecursosNatalia/imagenes/Seraphine_4.jpg" alt="" class="skin">
+                            <h1 class="slider_Text">SKIN NAME</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="sliderButtons">
+                    <button id="buttonLeft" class="buttonButton"><</button>
+                    <button id="buttonRight" class="buttonButton">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+	<script src="owl.carousel.min.js"></script>
+	<script src="script.js"></script>
+    <script src="Details.js"></script> -->
+
+    <script src="../JS/clasePersonajeEspecifico.js"></script>
+    <script src="../JS/characterDetail.js"></script>
+
+
+</body>
+
+</html>
