@@ -15,6 +15,10 @@ body::-webkit-scrollbar{
     font-family: LOL;
     src: url(../Fuentes/Beaufort\ for\ LOL\ Bold.ttf);
 }
+@font-face {
+    font-family: Roboto;
+    src: url(../Fuentes/Roboto/Roboto-Regular.ttf);
+}
 header{
     display: flex;
     align-items: center;    
@@ -95,7 +99,7 @@ nav {
     width: 75vw;
     height: 75vh;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.69);
     box-shadow: inset 4px 4px 100px #000000;
     margin-top: 120px;
     display: flex;
@@ -210,7 +214,7 @@ a:link, a:visited, a:active {
     color:#74542E;
 }
 #Favorites{
-    margin-left: 19vw;
+    margin-left: 22vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,7 +301,7 @@ a:link, a:visited, a:active {
 #campeonResume{
     width: 45vw;
     height: 330px;
-    font-family: LOL;
+    font-family: Roboto;
     font-size: 18px;
     color: white;
     font-weight: lighter;
@@ -308,6 +312,10 @@ a:link, a:visited, a:active {
     font-family: LOL;
     font-size:larger;
     color: white;
+    overflow: scroll;
+}
+#ResumeAbility::-webkit-scrollbar{
+    display: none;
 }
 #Text hr{
     width: 4px;
@@ -350,24 +358,24 @@ a:link, a:visited, a:active {
     bottom: 70px;
 }
 #spriteImg {
-    width: 220px;
-    height: 220px;
-    border-radius: 500px;
+    width: 180px;
+    height: 180px;
+    border-radius: 1000px;
     object-fit: cover;
     margin-bottom: 38px;
 }
 #Marco{
-    width: 275px;
+    width: 230px;
     position: relative;
-    left: 663px;
-    bottom: 405px;
+    left: 688px;
+    bottom: 380px;
 }
 #Container_rol h2{
     font-family: LOL;
     color: #D89E30;
 }
 #Container_rol p{
-    font-family: LOL;
+    font-family: Roboto;
     color: #ffffff;
     font-weight: lighter;
 }
@@ -377,15 +385,16 @@ a:link, a:visited, a:active {
     margin: 0;
     position: relative;
     left: -50px;
-    height: 330px;
-    margin-top: 30px;
+    height: 30vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #skillTitle {
     color: white; 
     font-family: LOL;
     margin-bottom: 10px;
-    margin-top: ;
 }
 
 .Skills {
@@ -400,7 +409,7 @@ a:link, a:visited, a:active {
     font-family: LOL;
 }
 #ResumeAbility{
-    font-family: LOL;
+    font-family: Roboto;
     width: 40vw;
 }
 
@@ -422,11 +431,18 @@ a:link, a:visited, a:active {
     color: white;
     position: relative;
 }
-#information2 h3{
+#campeonTittle_2{
     font-family: LOL;
     font-weight: bold;
     font-size: 24px;
     color: white;
+    position: relative;
+}
+#skillType{
+    font-family: LOL;
+    font-weight: bold;
+    font-size: 24px;
+    color: #D89E30;
     position: relative;
 }
 
