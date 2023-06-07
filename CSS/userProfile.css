@@ -1,3 +1,8 @@
+@font-face {
+    font-family: LOL;
+    src: url(../Fuentes/Beaufort\ for\ LOL\ Bold.ttf);
+}
+
 body {
     display: flex;
     justify-content: flex-start;
@@ -5,59 +10,68 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    font-family: LOL;
+    background-color:rgb(211, 216, 229);
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
 nav {
-    background-color: black;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    top: 0;
     width: 100%;
-    height: 80px;
+    height: 60px;
+    position: fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.871),rgba(0, 0, 0, 0.06));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: flex;
 }
 
 #lolLogo {
-    width: 100px;
+    height: 30px;
+    margin-right: 40px;
     margin-left: 15px;
 }
 
 #userNavbarTittle {
-    width: 320px;
+    width: 300px;
 }
 
 #userNavbarTittle {
-    font-family: 'BeaufortforLOL-Bold';
+    font-family: LOL;
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size:x-large;
     color: #D89E30;
-    margin-left: 20px;
 }
 
 #signOut {
-    width: 200px;
-    height: 50px;
-    background-color: white;
+    width: 100px;
+    height: 30px;
+    background-color:#021526;
     border-radius: 10px;
-    font-family: 'Roboto';
+    font-family: LOL;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     margin-right: 15px;
+    color: #FFFFFF;
+    border:none
 }
 
 #userProfilePrincipal {
-    width: 90%;
-    height: 78%;
+    width: 80%;
+    height: 70%;
     margin: 25px;
-    margin-top: 50px;
+    margin-top: 110px;
     box-shadow: 10px 10px 10px rgb(112, 112, 112);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     border-radius: 20px;
+    background-color: aliceblue;
 }
 
 #userProfileBackground {
@@ -79,12 +93,13 @@ nav {
     align-items: flex-start;
     width: 100%;
     height: 100%;
-    margin-left: 30px;
+    margin-left: 50px;
     padding-right: 30px;
+    padding-top: 50px;
 }
 
 #userImg {
-    width: 100px;
+    width: 80px;
     border-radius: 100px;
 }
 
@@ -99,36 +114,32 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    
     margin-left: 30px;
 }
 
 #contUserName h2 {
     margin: 0;
-    font-family: 'Roboto';
+    font-family: LOL;
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 47px;
     position: relative;
-    top: 20px;
 }
 
 #contUserName h3 {
     margin: 0;
     margin-left: 2px;
-    font-family: 'Roboto';
+    font-family: LOL;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 28px;
     position: relative;
-    top: 20px;
 }
 
 #userBoxes {
     height: 100%;
-    margin: 0px 30px 30px 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -137,13 +148,11 @@ nav {
 }
 
 .userBox {
-    margin: 30px;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-right: 50px;
 }
 
 .boxTittle {
-    font-family: 'Roboto';
+    font-family: LOL;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -152,11 +161,8 @@ nav {
 
 .box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
+    width: 300px;
     height: 40px;
-    background-color: #F4F4F4;
 }
 
 .boxText {
@@ -164,7 +170,6 @@ nav {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 26px;
 }
 
 #editCont {
@@ -178,14 +183,17 @@ nav {
     width: 350px;
     height: 40px;
     background-color: #D89E30;
-    font-family: 'Roboto';
+    font-family: LOL;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    bottom: 20px;
+    border-radius: 10px;
 }
 
 .horizontalSpace {
