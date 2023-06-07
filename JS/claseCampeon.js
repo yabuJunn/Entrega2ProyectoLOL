@@ -16,8 +16,8 @@ class CampeonGeneral {
               <h2>${this.name}</h2>
               <h3>${this.title}</h3>
               <p>${this.blurb}</p>
-              <img src="../Recursos/RecursosJuanDavid/Iconos/inactive_star.png" alt="" class="icon">
-              <img src="../Recursos/RecursosJuanDavid/Iconos/menu_points.png" alt="" class="icon">
+              <img src="../Recursos/RecursosJuanDavid/Iconos/inactive_star.png" alt="" class="icon" id="Star">
+              <img src="../Recursos/RecursosJuanDavid/Iconos/menu_points.png" alt="" class="icon" id="Point">
           </div>
       </div>
       `
