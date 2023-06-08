@@ -39,7 +39,8 @@ registerForm.addEventListener('submit', (event) => {
 	} 
 	
 	if (password.value !== confirmPassword.value) {
-		error.innerHTML = "Las contraseñas no coinciden"
+		showErrorModal("Las contraseñas no coinciden");
+		
 	} else {
 		event.preventDefault(); // Prevenir el envío del formulario
 
@@ -62,11 +63,11 @@ registerForm.addEventListener('submit', (event) => {
 
 			localStorage.setItem("usersData", usersDataString)
 
-			alert('Registro exitoso!');
+			showSuccessModal('Registro exitoso!');
 			registerForm.reset(); // Limpiar el formulario
 
 			// Redirigir al formulario de inicio de sesión
-			window.location.href = '../HTML/Login.html';
+			
 
 		} else {
 			console.log("Entro a la condicion usersData existe")
@@ -86,11 +87,11 @@ registerForm.addEventListener('submit', (event) => {
 
 			localStorage.setItem("usersData", usersDataString)
 
-			alert('Registro exitoso!');
+			showSuccessModal('Registro exitoso!');
 			registerForm.reset(); // Limpiar el formulario
 
 			// Redirigir al formulario de inicio de sesión
-			window.location.href = '../HTML/Login.html';
+			
 		}
 	}
 });
@@ -115,4 +116,72 @@ function buscarCorreo(email, usersdata) {
 	return false
 	}
 	
+}
+
+
+function showErrorModal(message) {
+  const modalBackground = createModalBackground();
+  const modal = createModal("Error", message);
+
+  modal.appendChild(createCloseButton(closeModal));
+  modalBackground.appendChild(modal);
+  document.body.appendChild(modalBackground);
+}
+
+function showSuccessModal(message) {
+  const modalBackground = createModalBackground();
+  const modal = createModal("Éxito", message);
+
+  const closeButton = createCloseButton(() => {
+    closeModal();
+    redirectToLogin();
+  });
+  closeButton.textContent = "Aceptar";
+
+  modal.appendChild(closeButton);
+  modalBackground.appendChild(modal);
+  document.body.appendChild(modalBackground);
+}
+
+function createModalBackground() {
+  const modalBackground = document.createElement("div");
+  modalBackground.classList.add("modal-background");
+  return modalBackground;
+}
+
+function createModal(title, message) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+
+  const modalTitle = document.createElement("h2");
+  modalTitle.textContent = title;
+
+  const modalMessage = document.createElement("p");
+  modalMessage.textContent = message;
+
+  modalContent.appendChild(modalTitle);
+  modalContent.appendChild(modalMessage);
+  modal.appendChild(modalContent);
+
+  return modal;
+}
+
+function createCloseButton(clickHandler) {
+  const closeButton = document.createElement("button");
+  closeButton.classList.add("modal-close");
+  closeButton.textContent = "Cerrar";
+  closeButton.addEventListener("click", clickHandler);
+  return closeButton;
+}
+
+function closeModal() {
+  const modalBackground = document.querySelector(".modal-background");
+  modalBackground.parentNode.removeChild(modalBackground);
+}
+
+function redirectToLogin() {
+  window.location.href = '../HTML/Login.html';
 }

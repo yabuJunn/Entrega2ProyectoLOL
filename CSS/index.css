@@ -1,8 +1,7 @@
 @font-face {
-    font-family: "Beaufort for LOL Bold";
-    src: url(Beaufort\ for\ LOL\ Bold.ttf);
+    font-family: LOL;
+    src: url(../Fuentes/Beaufort\ for\ LOL\ Bold.ttf);
 }
-
 
 
 * {
@@ -168,7 +167,7 @@ button {
   
 
 .tittle-content {
-    font-family: "Beaufort for LOL Bold";
+    font-family: "LOL";
     font-size: 35px;
 }
 
@@ -177,6 +176,7 @@ button {
     font-weight: lighter;
     font-size: 20px;
     margin-top: 23px;
+    padding-right: 5px;
 }
 .main-tittle-about {
     width: 100%;
@@ -192,8 +192,8 @@ button {
     
 }
 
-.about-tittle {
-    font-family: "Beaufort for LOL Bold";
+.about-tittle  {
+    font-family: LOL;
     font-size: 55px;
 }
 
