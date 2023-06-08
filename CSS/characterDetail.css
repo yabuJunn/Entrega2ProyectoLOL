@@ -213,7 +213,7 @@ a:link, a:visited, a:active {
 #Available_Skins:active{
     color:#74542E;
 }
-#Favorites{
+.Favorites{
     margin-left: 22vw;
     display: flex;
     justify-content: center;
@@ -235,7 +235,7 @@ a:link, a:visited, a:active {
     background-position-y: center;
     padding-left: 15px;
 }
-#Favorites:hover{
+.Favorites:hover{
     box-sizing: border-box;
     border: 2px solid white;
     background-color:#ffffff00;
@@ -249,7 +249,7 @@ a:link, a:visited, a:active {
     background-position-y: center;
     padding-left: 15px;
 }
-#Favorites:active{
+.Favorites:active{
     box-sizing: border-box;
     border: 2px solid #fff;
     background-color:#74542E;
@@ -263,6 +263,59 @@ a:link, a:visited, a:active {
     background-position-y: center;
     padding-left: 15px;
 }
+
+.FavoritesAdded{
+    margin-left: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: LOL;
+    font-size:medium;
+    color:#fff;  
+    width: 180px;
+    height: 30px;
+    background-color: #D89E30;
+    border: none;
+    border-radius: 30px;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+    margin-right: 5px;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+
+.FavoritesAdded:hover{
+    box-sizing: border-box;
+    border: 2px solid white;
+    background-color:#ffffff00;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    color: white;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+.FavoritesAdded:active{
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    background-color:#74542E;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    color: #fff;
+    background-image: url(../Recursos/RecursosNatalia/Imagenes/Star_Icon.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: center;
+    padding-left: 15px;
+}
+
 #Container_Text{
     display: flex;
     width: 64vw;
@@ -287,7 +340,7 @@ a:link, a:visited, a:active {
     font-family: LOL;
     font-weight: bold;
     font-size: 24px;
-    color: white;
+    color: #D89E30;
     position: relative;
 }
 #Text{
@@ -368,7 +421,7 @@ a:link, a:visited, a:active {
     width: 230px;
     position: relative;
     left: 688px;
-    bottom: 380px;
+    bottom: 356px;
 }
 #Container_rol h2{
     font-family: LOL;
@@ -486,7 +539,7 @@ a:link, a:visited, a:active {
     width: 50px;
     height: 50px;
     position: relative;
-    left: 480px;
+    left: 434px;
     margin: 5px;
     border-radius: 10px;
     font-size: 50px;
@@ -499,13 +552,17 @@ a:link, a:visited, a:active {
     width: 50px;
     height: 50px;
     position: relative;
-    left: 480px;
+    left: 434px;
     margin: 5px;
     border-radius: 10px;
     font-size: 50px;
     background-color: #ffc861;
     border: none;
     color: #ffffff;
+}
+
+.buttonButton img {
+    color: white;
 }
 
 :root{

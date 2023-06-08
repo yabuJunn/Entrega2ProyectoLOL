@@ -26,7 +26,7 @@
                     <li><a id="Overview" onclick="mostrarInformation1()">Overview</a></li>
                     <li><a id="Abilities" onclick="mostrarInformation2()">Abilities</a></li>
                     <li><a id="Available_Skins" onclick="mostrarInformation3()">Available Skins</a></li>
-                    <li><a href="favoritePage.html" id="Favorites">Add to favorites</a></li>
+                    <li><a id="Favorites" class="Favorites" onclick="ToFavorites(`${idCampeon}`)">Add to favorites</a></li>
                     <hr id="Línea_1">
                     <hr id="Línea_2">
                     <hr id="Línea_3">
@@ -46,15 +46,11 @@
                     </div>
                     <div id="Container_rol">
                         <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Seraphine_0.jpg" alt="" id="spriteImg">
-                        <h2>ROL</h2>
-                        <p>Mage</p>
                     </div>
                 </div>
                 <img src="../Recursos/RecursosNatalia/imagenes/Marco.png" alt="" id="Marco">
             </div>
             <div id="information2" class="informationHidden">
-                <h1 id="campeonName_2">SERAPHINE</h1>
-                <h3 id="campeonTittle_2">The Starry-Eyed Songstress</h3>
                 <ul id="List">
                     <li><img id="passive" class="Skills" class="SkillsSelected" src="" alt="" onclick="passive()"></li>
                     <li><img id="skill1" class="Skills" src="" alt="" onclick="spell1()"></li>
@@ -89,8 +85,8 @@
                     </div>
                 </div>
                 <div class="sliderButtons">
-                    <button id="buttonLeft" class="buttonButton"><</button>
-                    <button id="buttonRight" class="buttonButton">></button>
+                    <button id="buttonLeft" class="buttonButton"><img src="../Recursos/RecursosJuanDavid/Iconos/arrow_back_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
+                    <button id="buttonRight" class="buttonButton"><img src="../Recursos/RecursosJuanDavid/Iconos/arrow_forward_FILL0_wght400_GRAD0_opsz48.svg" alt=""></button>
                 </div>
             </div>
         </div>

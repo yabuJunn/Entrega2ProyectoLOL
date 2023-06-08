@@ -12,7 +12,7 @@
         <img src="../Recursos/RecursosJuanDavid/Recursos/Logo_Lol.png" alt="" id="lolLogo">
         <h1 id="userNavbarTittle">Perfil de Usuario</h1>
         <div class="horizontalSpace"></div>
-        <a href="../HTML/index.html"><button id="signOut">Sign Out</button></a>
+        <button id="signOut" onclick="logOut()" >Sign Out</button>
     </nav>
     <div id="userProfilePrincipal">
         <div id="userProfileBackground"></div>
@@ -20,58 +20,39 @@
             <div id="userSuperior">
                 <img src="../Recursos/RecursosJuanDavid/Recursos/UserProfile.jpg" alt="" id="userImg">
                 <div id="contUserName">
-                    <h2>User name</h2>
-                    <h3>User tittle</h3>
+                    <h2 id="username">User name</h2>
+                    <h3 id="userNickname">User tittle</h3>
                 </div>
             </div>
         <div id="userBoxes">
             <div class="userBox">
                 <p class="boxTittle">Name</p>
                 <div class="box">
-                    <p class="boxText">Catie</p>
-                </div>
-            </div>
-            <div class="userBox">
-                <p class="boxTittle">Last Name</p>
-                <div class="box">
-                    <p class="boxText">Williams</p>
+                    <p class="boxText" id="userName">Catie</p>
                 </div>
             </div>
             <div class="userBox">
                 <p class="boxTittle">Email</p>
                 <div class="box">
-                    <p class="boxText">example@email.com</p>
+                    <p class="boxText" id="userEmail">example@email.com</p>
                 </div>
             </div>
             <div class="userBox">
                 <p class="boxTittle">Phone Number</p>
                 <div class="box">
-                    <p class="boxText">+(95) 9123728167</p>
-                </div>
-            </div>
-            <div class="userBox">
-                <p class="boxTittle">Location</p>
-                <div class="box">
-                    <p class="boxText">Cali, Colombia</p>
-                </div>
-            </div>
-            <div class="userBox">
-                <p class="boxTittle">Favorite Champiom</p>
-                <div class="box">
-                    <p class="boxText">Vex, the Gloomist</p>
+                    <p class="boxText" id="userPhone">+(95) 9123728167</p>
                 </div>
             </div>
             <div class="userBox">
                 <p class="boxTittle">Password</p>
                 <div class="box">
-                    <p class="boxText">****************</p>
+                    <p class="boxText" id="userPassword">****************</p>
                 </div>
-            </div>
-            <div class="userBox">
-                <p class="boxTittle" style="color: white;">Password</p>
-                <button id="editProfileButton">Edit Profile</button>
             </div>
         </div>
     </div>
+
+    <script src="../JS/userProfile.js"></script>
+
 </body>
 </html>

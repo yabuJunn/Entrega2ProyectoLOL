@@ -8,21 +8,24 @@
     <link rel="stylesheet" href="../CSS/SignUp.css">
 </head>
 <body>
+    <div id="fondo">
+
+    </div>
     <div id="Background">
         <form id="Sign_Up">
             <h1 id="Titulo">SIGN UP</h1>
-            <label for="username"></label>
-            <input id="Email" type="email" placeholder="Email" required>
-            <input id="username" type="text" name="username" placeholder="Username" required>
-            <label for="password"></label>
-            <input id="password" type="password" name="password" placeholder="Password" required>
-            <input id="confirmPassword" type="password" placeholder="Confirm Password" required>
+            <input id="Email" type="email" placeholder="Email" required class="input">
+            <input id="username" type="text" name="username" placeholder="Username" required class="input">
+            <input id="name" type="text" name="name" placeholder="Enter your name" required class="input">
+            <input id="phone" type="tel" placeholder="Enter your phone" required class="input">
+            <input id="password" type="password" name="password" placeholder="Password" required class="input">
+            <input id="confirmPassword" type="password" placeholder="Confirm Password" required class="input">
             <p id="error"></p>
             <div id="button">
                 <input type="submit" value="Registrarse" >
             </div>
             <div id="links">
-                <h4>Already have account?</h4>
+                <h4 onclick="buscarCorreo(Email.value)">Already have account?</h4>
                 <a href="../HTML/Login.html">Sign In</a>
             </div>
         </form>

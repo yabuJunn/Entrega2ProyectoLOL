@@ -1,3 +1,14 @@
+//Llamo a los datos del usuario y la condicion de que si no esta registrado lo mande a la landing page
+
+var logedUser = localStorage.getItem("logedUser")
+if (logedUser === null) {
+    alert("No hay un usuario registrado")
+    window.location.href = '../HTML/index.html';
+}
+var logedUserJSON = JSON.parse(logedUser)
+console.log(logedUserJSON)
+console.log(logedUserJSON.favorites)
+
 const information1 = document.getElementById("information1")
 const information2 = document.getElementById("information2")
 const information3 = document.getElementById("information3")
@@ -51,6 +62,7 @@ const campeonName = document.getElementById("campeonName")
 const campeonTittle = document.getElementById("campeonTittle")
 const campeonResume = document.getElementById("campeonResume")
 const background = document.getElementById("Background")
+const favoriteButton = document.getElementById("Favorites")
 
 const sliderCard = document.getElementById("sliderCard")
 const spriteImg = document.getElementById("spriteImg")
@@ -69,19 +81,34 @@ skill2Img.classList.add("SkillsUnSelected")
 skill3Img.classList.add("SkillsUnSelected")
 skill4Img.classList.add("SkillsUnSelected")
 
+//En esta aprte del codigo hago la logica de los favoritos
+
+for (let i = 0; i < logedUserJSON.favorites.length; i++) {
+    const favoriteElement = logedUserJSON.favorites[i];
+    if( favoriteElement === idCampeon) {
+        favoriteButton.classList.remove("Favorites")
+        favoriteButton.classList.add("FavoritesAdded")
+        favoriteButton.innerHTML = "Added to favorites"
+        var favoriteState = 1
+        window.favoriteState = favoriteState
+        console.log("Es favorito")
+    }
+    
+}
+
 //Se hace la funcion para pedir la data especifica del personaje, es una funcion asincronica porque hay que esperar la data
 
 async function pedirPersonaje(idCampeon) { 
     const response = await fetch(`https://ddragon.leagueoflegends.com/cdn/13.8.1/data/en_US/champion/${idCampeon}.json`) //Se pide la data, que aprovechando que es un link fijo y solo se cambia el nombre del personaje que estamos pidiendo, esta nos devuelve todo el json asociado al personaje
     const json = await response.json()  //Aqui se espera la respuesta del API
     const dataCampeon = json.data   //Como el json me trae informacion inncesesaria la depuro para que solo me traiga el data
-    console.log(dataCampeon)
+    //console.log(dataCampeon)
 
     //IMPORTANTE: Como el API me arroja la data es un objeto con los datos pero esta dentro de otro objeto con el nombre del personaje, asi que usamos dataCampeon[id] para acceder dentro del objeto y llegar a la data que necesitamos, importante que las [] se usen, de lo contrario estaria buscando una key string que no existe en este caso, porque estamos usando la id que tiene el nombre del personaje como una variable, los [] pueden recibir variables
     
     //Aqui ya se crea el objeto con la clase 
     var personajeEspecifico = new CampeonEspecifico(dataCampeon[idCampeon].id, dataCampeon[idCampeon].name, dataCampeon[idCampeon].title, dataCampeon[idCampeon].lore, dataCampeon[idCampeon].blurb, dataCampeon[idCampeon].spells[0].description, dataCampeon[idCampeon].spells[1].description, dataCampeon[idCampeon].spells[2].description, dataCampeon[idCampeon].spells[3].description, dataCampeon[idCampeon].passive.description, dataCampeon[idCampeon].spells[0].name, dataCampeon[idCampeon].spells[1].name, dataCampeon[idCampeon].spells[2].name, dataCampeon[idCampeon].spells[3].name, dataCampeon[idCampeon].passive.name, dataCampeon[idCampeon].spells[0].image.full, dataCampeon[idCampeon].spells[1].image.full, dataCampeon[idCampeon].spells[2].image.full, dataCampeon[idCampeon].spells[3].image.full, dataCampeon[idCampeon].passive.image.full, dataCampeon[idCampeon].skins.length)
-    console.log(personajeEspecifico)
+    //console.log(personajeEspecifico)
 
     personajeEspecifico.changeInformation()
 
@@ -251,4 +278,76 @@ slider.addEventListener('transitionend', reorderSlide)
 
 reorderSlide()
 
+}
+
+if (favoriteState === undefined) {
+    console.log("Favoritos es null")
+    favoriteState = 0
+}
+
+function ToFavorites(id) {
+    var logedUser = localStorage.getItem("logedUser")
+    var logedUserJSON = JSON.parse(logedUser)
+    console.log(favoriteState)
+    if (favoriteState === 0) {
+        console.log("No esta añandido a favoritos")
+        listaFavoritos = logedUserJSON.favorites
+        listaFavoritos.push(id)
+        logedUserJSON["favorites"] = listaFavoritos
+        var logedUserString = JSON.stringify(logedUserJSON)
+        localStorage.setItem("logedUser", logedUserString)
+        var usersData = localStorage.getItem("usersData")
+        var usersDataJSON = usersData
+        for (let i = 0; i < usersDataJSON.length; i++) {
+            const element = usersDataJSON[i];
+            if (element.email === logedUserJSON.email) {
+                usersDataJSON[i] = logedUserJSON
+                var newUsersDataString = JSON.stringify(logedUserJSON)
+                localStorage.setItem("usersData", newUsersDataString)
+            }
+        }
+        favoriteButton.classList.remove("Favorites")
+        favoriteButton.classList.add("FavoritesAdded")
+        favoriteButton.innerHTML = "Added to favorites"
+        favoriteState = 1
+        window.favoriteState = 1
+        var logedUser = localStorage.getItem("logedUser")
+        var logedUserJSON = JSON.parse(logedUser)
+        console.log(logedUserJSON.favorites)
+        return
+    }
+
+    if (favoriteState === 1) {
+        console.log("SI ESTA AÑADIDO A FAVORITOS")
+        listaFavoritos = logedUserJSON.favorites
+        for (let i = 0; i < listaFavoritos.length; i++) {
+            var favoritesDelete = listaFavoritos[i];
+            if (favoritesDelete === id) {
+                var favoriteToDelete = i
+            }
+        }
+        listaFavoritos.splice(favoriteToDelete, 1)
+        logedUserJSON["favorites"] = listaFavoritos
+        var logedUserString = JSON.stringify(logedUserJSON)
+        localStorage.setItem("logedUser", logedUserString)
+        var usersData = localStorage.getItem("usersData")
+        var usersDataJSON = usersData
+        for (let i = 0; i < usersDataJSON.length; i++) {
+            const element = usersDataJSON[i];
+            if (element.email === logedUserJSON.email) {
+                usersDataJSON[i] = logedUserJSON
+                var newUsersDataString = JSON.stringify(logedUserJSON)
+                localStorage.setItem("usersData", newUsersDataString)
+            }
+        }
+        favoriteButton.classList.remove("FavoritesAdded")
+        favoriteButton.classList.add("Favorites")
+        favoriteButton.innerHTML = "Add to favorites"
+        favoriteState = 0
+        window.favoriteState = 0
+        var logedUser = localStorage.getItem("logedUser")
+        var logedUserJSON = JSON.parse(logedUser)
+        console.log(logedUserJSON.favorites)
+        return
+    }
 }

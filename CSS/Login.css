@@ -9,8 +9,17 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+
+#fondo {
+    position: fixed;
+    background-image: url(https://displays.riotgames.com/static/content-original-championillustrations-group-slashes-9828cf13cecf88fb9f21ee17afa6874e.jpg);
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
 #Background{
-    background-image: url(../Recursos/RecursosNatalia/Imagenes/Fondo_C.png);
     background-size: cover;
     background-position: bottom;
     width: 100vw;
@@ -170,6 +179,7 @@ a:link, a:visited, a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 #button input{
     display: flex;

@@ -3,6 +3,14 @@
 const contenedorPrincipal = document.getElementById("contenedorAllCampeones")
 const searchCampeonTxt = document.getElementById("searchCampeonTxt")
 
+//Llamo a los datos del usuario y la condicion de que si no esta registrado lo mande a la landing page
+
+var logedUser = localStorage.getItem("logedUser")
+if (logedUser === null) {
+    alert("No hay un usuario registrado")
+    window.location.href = '../HTML/index.html';
+}
+var logedUserJSON = JSON.parse(logedUser)
 //Llamo los datos de la api con esta funcion
 
 async function pedirData() { 
@@ -45,12 +53,7 @@ async function pedirData() {
 
     //Se crea la funcion de crear las tarjetas dinamicas de personaje, llamando los elementos de la lista de nuevosCampeones y llamo a la funcion de toMainPage que esta dentro de la clase de CampeonGeneral
 
-    function crearTarjetasMainPage() {
-        for (let i = 0; i < nuevosCampeones.length; i++) {
-            element = nuevosCampeones[i]
-            contenedorPrincipal.innerHTML += element.toMainPage()  
-        }
-    }
+    
 
     crearTarjetasMainPage()
     
@@ -65,14 +68,103 @@ function selectChampiom(id) {
 }
 
 function buscarPersonaje(textoABuscar) {
+    var logedUser = localStorage.getItem("logedUser")
+    var logedUserJSON = JSON.parse(logedUser)
+
     contenedorPrincipal.innerHTML = ""
     var textoABuscarLowerCase = textoABuscar.toLowerCase()
     for (let i = 0; i < nuevosCampeonesGlobal.length; i++) {
+        var isFavorite = 0
         const element = nuevosCampeonesGlobal[i];
         if (element.id.toLowerCase().includes(textoABuscarLowerCase)) {
-            console.log(element.id.toLowerCase())
-            contenedorPrincipal.innerHTML += element.toMainPage()
+            var listaFavoritos = logedUserJSON.favorites
+            for (let i = 0; i < listaFavoritos.length; i++) {
+                var campeonFavorito = listaFavoritos[i];
+                if (campeonFavorito === element.id) {
+                    contenedorPrincipal.innerHTML += element.toMainPageFavorite()
+                    var isFavorite = 1
+                }               
+            }
+            if (isFavorite === 0) {
+                contenedorPrincipal.innerHTML += element.toMainPage()  
+            }
         }
     }
     
+}
+
+//Esta es la funcion para crear las tarjetas
+
+function crearTarjetasMainPage() {
+    var logedUser = localStorage.getItem("logedUser")
+    var logedUserJSON = JSON.parse(logedUser)
+    console.log(logedUserJSON.favorites)
+
+    contenedorPrincipal.innerHTML = ""
+ 
+
+    for (let i = 0; i < nuevosCampeonesGlobal.length; i++) {
+        var isFavorite = 0
+        element = nuevosCampeonesGlobal[i]
+        var listaFavoritos = logedUserJSON.favorites
+        for (let i = 0; i < listaFavoritos.length; i++) {
+            var campeonFavorito = listaFavoritos[i];
+            if (campeonFavorito === element.id) {
+                contenedorPrincipal.innerHTML += element.toMainPageFavorite()
+                var isFavorite = 1
+            }
+        }
+        if (isFavorite === 0) {
+            contenedorPrincipal.innerHTML += element.toMainPage()  
+        }
+
+    }
+
+    searchCampeonTxt.value = ""
+}
+
+function addFavorite(id) {
+    listaFavoritos = logedUserJSON.favorites
+    listaFavoritos.push(id)
+    logedUserJSON["favorites"] = listaFavoritos
+    var logedUserString = JSON.stringify(logedUserJSON)
+    localStorage.setItem("logedUser", logedUserString)
+    var usersData = localStorage.getItem("usersData")
+    var usersDataJSON = usersData
+    for (let i = 0; i < usersDataJSON.length; i++) {
+        const element = usersDataJSON[i];
+        if (element.email === logedUserJSON.email) {
+            usersDataJSON[i] = logedUserJSON
+            var newUsersDataString = JSON.stringify(logedUserJSON)
+            localStorage.setItem("usersData", newUsersDataString)
+        }
+    }
+
+    crearTarjetasMainPage()
+}
+
+function deleteFavorite(id) {
+    listaFavoritos = logedUserJSON.favorites
+    for (let i = 0; i < listaFavoritos.length; i++) {
+        var favoritesDelete = listaFavoritos[i];
+        if (favoritesDelete === id) {
+            var favoriteToDelete = i
+        }
+    }
+    listaFavoritos.splice(favoriteToDelete, 1)
+    logedUserJSON["favorites"] = listaFavoritos
+    var logedUserString = JSON.stringify(logedUserJSON)
+    localStorage.setItem("logedUser", logedUserString)
+    var usersData = localStorage.getItem("usersData")
+    var usersDataJSON = usersData
+    for (let i = 0; i < usersDataJSON.length; i++) {
+        const element = usersDataJSON[i];
+        if (element.email === logedUserJSON.email) {
+            usersDataJSON[i] = logedUserJSON
+            var newUsersDataString = JSON.stringify(logedUserJSON)
+            localStorage.setItem("usersData", newUsersDataString)
+        }
+    }
+
+    crearTarjetasMainPage()
 }

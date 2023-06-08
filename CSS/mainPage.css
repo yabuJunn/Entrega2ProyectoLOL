@@ -11,7 +11,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: LOL;
-    background-color:rgb(211, 216, 229);
+    background-color:#021526;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -80,7 +80,7 @@ h1 {
     font-weight: bolder;
     font-size: 36px;
     line-height: 46px; /* identical to box height */
-    color: #D89E30;
+    color: #eca41b;
     margin-top: 80px;
 }
 
